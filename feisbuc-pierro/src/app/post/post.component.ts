@@ -8,9 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PostComponent implements OnInit {
   @Input() post
   @Input() user
+  nLike: number = 0
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  like() {
+    this.nLike ++
+  }
 }
