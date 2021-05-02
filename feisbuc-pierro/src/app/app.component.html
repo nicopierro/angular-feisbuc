@@ -7,6 +7,8 @@
   <label for='post'>Post</label>
 </div>
 
-<button (click) = 'invia(name, post)'>Invia</button>
+<button (click)='invia(name, post)'>Invia</button>
 
-{{postList | json}}
+<div *ngFor='let p of postList'>
+  <app-post [user]='p.user' [post]='p.post'></app-post>
+</div>
