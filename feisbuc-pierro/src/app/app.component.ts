@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Post } from './post.model'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'feisbuc-pierro';
+   postList: Array<Post> = new Array<Post>()
+
+  invia(userPost: HTMLInputElement, userName: HTMLInputElement) {
+    let newPost = new Post(userName.value, userPost.value)
+    this.postList.push(newPost)
+  }
 }
