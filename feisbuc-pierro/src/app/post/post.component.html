@@ -2,5 +2,15 @@
   <p>{{post}} - {{user}}</p>
 </div>
 <div>
-   <button (click)='like()'>like</button>
+  <button (click)='like()'>like</button>
+</div>
+
+<div>
+  <input type='text' name='comment' #comment>
+  <label for='comment'>commento</label>
+  <button (click)='commenta(comment.value)'>commenta</button>
+</div>
+
+<div *ngFor='let c of commentList'>
+  {{c}}
 </div>
