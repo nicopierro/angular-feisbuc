@@ -1,14 +1,14 @@
-<div>
-  <p>{{post}} - {{user}}</p>
+<div class='card-text'>
+  <p>{{post}} - <span class='font-weight-light'>{{user}}</span></p>
 </div>
 <div>
-  <button (click)='like()'>like</button>
+  {{nLike}}<button class='btn btn-primary' (click)='like()'>like</button>
 </div>
 
-<div>
-  <input type='text' name='comment' #comment>
-  <label for='comment'>commento</label>
-  <button (click)='commenta(comment.value)'>commenta</button>
+<div class='form-group'>
+  <label for='comment'>Commento:</label>
+  <input class='form-control' type='text' name='comment' placeholder='Comment the post' #comment>
+  <button class='btn btn-secondary' (click)='commenta(comment.value)'>commenta</button>
 </div>
 
 <div *ngFor='let c of commentList'>

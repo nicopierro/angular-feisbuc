@@ -1,14 +1,18 @@
-<div>
-  <input type='text' name='user' #name>
-  <label for='user'>Nome</label>
-</div>
-<div>
-  <input type='text' name='post' #post>
-  <label for='post'>Post</label>
-</div>
+<div class='container'>
+  <div class='form-group'>
+    <label for='user'>Nome</label>
+    <input class='form-control' type='text' name='user' placeholder='Enter name' #name>
+  </div>
+  <div class='form-group'>
+    <label for='post'>Post</label>
+    <input class='form-control' type='text' name='post' placeholder='Enter your post' #post>
+  </div>
 
-<button (click)='invia(name, post)'>Invia</button>
+  <button class='btn btn-primary' (click)='invia(name, post)'>Invia</button>
 
-<div *ngFor='let p of postList'>
-  <app-post [user]='p.user' [post]='p.post'></app-post>
+  <hr>
+
+  <div class='card' *ngFor='let p of postList'>
+    <app-post class='card-body' [user]='p.user' [post]='p.post'></app-post>
+  </div>
 </div>
