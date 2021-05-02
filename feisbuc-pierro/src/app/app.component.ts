@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'feisbuc-pierro';
    postList: Array<Post> = new Array<Post>()
 
-  invia(userPost: HTMLInputElement, userName: HTMLInputElement) {
+  invia(userName: HTMLInputElement, userPost: HTMLInputElement) {
     let newPost = new Post(userName.value, userPost.value)
     this.postList.push(newPost)
   }

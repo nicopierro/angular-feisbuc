@@ -1,10 +1,12 @@
 <div>
-  <input type='text' name='user'>
+  <input type='text' name='user' #name>
   <label for='user'>Nome</label>
 </div>
 <div>
-  <input type='text' name='post'>
+  <input type='text' name='post' #post>
   <label for='post'>Post</label>
 </div>
 
-<button>Invia</button>
+<button (click) = 'invia(name, post)'>Invia</button>
+
+{{postList | json}}
